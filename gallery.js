@@ -77,14 +77,8 @@ setInterval(createHeart,1800);
 // Continue Button
 // ======================================
 
-const continueBtn=document.getElementById("continueBtn");
+const openLetterButton = document.getElementById("openLetterButton");
 
-if(continueBtn){
-
-continueBtn.addEventListener("click",()=>{
-
-window.location.href="final.html";
-
+openLetterButton.addEventListener("click", () => {
+    window.location.href = "letter_fixed.html";
 });
-
-}
