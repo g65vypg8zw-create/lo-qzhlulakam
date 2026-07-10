@@ -1,0 +1,457 @@
+/* ===========================================
+   Reset
+=========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Noto Sans Arabic",sans-serif;
+
+    background:linear-gradient(
+        180deg,
+        #fffefd 0%,
+        #fff7fb 30%,
+        #fff2f8 70%,
+        #ffffff 100%
+    );
+
+    color:#5e5260;
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+    position:relative;
+
+}
+
+
+/* ===========================================
+   Background
+=========================================== */
+
+.background-blur{
+
+    position:fixed;
+
+    border-radius:50%;
+
+    filter:blur(90px);
+
+    z-index:-1;
+
+    opacity:.55;
+
+}
+
+.blur-one{
+
+    width:280px;
+
+    height:280px;
+
+    background:#ffd7ea;
+
+    top:-90px;
+
+    left:-80px;
+
+}
+
+.blur-two{
+
+    width:260px;
+
+    height:260px;
+
+    background:#ffe9f5;
+
+    bottom:-100px;
+
+    right:-80px;
+
+}
+
+
+/* ===========================================
+   Main
+=========================================== */
+
+.gallery-container{
+
+    width:min(92%,760px);
+
+    margin:auto;
+
+    padding:65px 0 90px;
+
+}
+
+
+/* ===========================================
+   Header
+=========================================== */
+
+.gallery-header{
+
+    text-align:center;
+
+    margin-bottom:65px;
+
+}
+
+.small-title{
+
+    display:inline-block;
+
+    background:#ffffff;
+
+    color:#de73a6;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:.88rem;
+
+    font-weight:600;
+
+    box-shadow:0 12px 35px rgba(255,170,205,.18);
+
+}
+
+.gallery-header h1{
+
+    margin-top:22px;
+
+    color:#6c4d63;
+
+    font-size:2rem;
+
+    line-height:1.5;
+
+    font-weight:700;
+
+}
+
+.gallery-header p{
+
+    margin-top:18px;
+
+    color:#897585;
+
+    line-height:2;
+
+    font-size:1rem;
+
+}
+/* ===========================================
+   Memory Card
+=========================================== */
+
+.memory-card{
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(24px);
+
+    -webkit-backdrop-filter:blur(24px);
+
+    border:1px solid rgba(255,255,255,.65);
+
+    border-radius:34px;
+
+    overflow:hidden;
+
+    margin-bottom:65px;
+
+    box-shadow:
+        0 18px 45px rgba(255,183,214,.16),
+        0 8px 18px rgba(255,255,255,.75) inset;
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease;
+
+}
+
+.memory-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 30px 60px rgba(255,183,214,.24),
+        0 8px 18px rgba(255,255,255,.8) inset;
+
+}
+
+
+/* ===========================================
+   Image
+=========================================== */
+
+.memory-image-box{
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.memory-image{
+
+    width:100%;
+
+    display:block;
+
+    aspect-ratio:4/5;
+
+    object-fit:cover;
+
+    transition:transform .7s ease;
+
+}
+
+.memory-card:hover .memory-image{
+
+    transform:scale(1.06);
+
+}
+
+
+/* ===========================================
+   Content
+=========================================== */
+
+.memory-content{
+
+    padding:32px;
+
+}
+
+.memory-number{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:44px;
+
+    height:44px;
+
+    border-radius:50%;
+
+    background:#ffe8f2;
+
+    color:#d96b9e;
+
+    font-family:"Poppins",sans-serif;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+.memory-title{
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:1.7rem;
+
+    color:#c76496;
+
+    margin-bottom:18px;
+
+    letter-spacing:.4px;
+
+}
+
+.memory-divider{
+
+    width:70px;
+
+    height:4px;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        90deg,
+        #ffb8d6,
+        #ffd9ea
+    );
+
+    margin-bottom:24px;
+
+}
+
+.memory-text{
+
+    font-size:1.05rem;
+
+    line-height:2.3;
+
+    color:#6d5c69;
+
+    font-weight:500;
+
+}
+/* ===========================================
+   Next Button
+=========================================== */
+
+.next-section{
+
+    display:flex;
+
+    justify-content:center;
+
+    padding:20px 0 90px;
+
+}
+
+.next-button{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    color:#ffffff;
+
+    background:linear-gradient(
+        135deg,
+        #f8a7cb,
+        #e98db6
+    );
+
+    padding:16px 34px;
+
+    border-radius:999px;
+
+    box-shadow:
+        0 18px 35px rgba(239,150,191,.28);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        opacity .35s ease;
+
+}
+
+.next-button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 26px 45px rgba(239,150,191,.35);
+
+}
+
+.next-button:active{
+
+    transform:scale(.98);
+
+}
+
+
+/* ===========================================
+   Animation
+=========================================== */
+
+.fade-up{
+
+    animation:fadeUp .9s ease both;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ===========================================
+   Responsive
+=========================================== */
+
+@media (max-width:600px){
+
+    .gallery-container{
+
+        width:92%;
+
+    }
+
+    .gallery-header h1{
+
+        font-size:1.7rem;
+
+    }
+
+    .memory-content{
+
+        padding:24px;
+
+    }
+
+    .memory-title{
+
+        font-size:1.45rem;
+
+    }
+
+    .memory-text{
+
+        font-size:.98rem;
+
+        line-height:2.2;
+
+    }
+
+    .next-button{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
