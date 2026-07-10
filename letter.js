@@ -175,53 +175,8 @@ function startSparkles() {
 
     }, 180);
 
-}
-/* Continue Button */
+}const continueBtn = document.getElementById("continueBtn");
 
-.continue-area{
-
-    text-align:center;
-
-    margin-top:45px;
-
-}
-
-.continue-btn{
-
-    opacity:0;
-
-    transform:translateY(20px);
-
-    transition:.7s;
-
-    padding:14px 36px;
-
-    border:none;
-
-    border-radius:40px;
-
-    background:#ff7eb6;
-
-    color:white;
-
-    font-size:1rem;
-
-    cursor:pointer;
-
-    box-shadow:0 12px 30px rgba(255,126,182,.35);
-
-}
-
-.continue-btn.show{
-
-    opacity:1;
-
-    transform:translateY(0);
-
-}
-
-.continue-btn:hover{
-
-    transform:scale(1.05);
-
-}
+setTimeout(() => {
+    continueBtn.classList.add("show");
+}, paragraphs.length * 350 + 1000);
