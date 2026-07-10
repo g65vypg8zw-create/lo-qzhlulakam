@@ -52,9 +52,21 @@ const answersContainer = document.getElementById("answersContainer");
    Random Error
 ========================================================== */
 
+let errorIndex = 0;
+
 function randomError() {
-    return errorMessages[Math.floor(Math.random() * errorMessages.length)];
+
+    const message = errorMessages[errorIndex];
+
+    errorIndex++;
+
+    if (errorIndex >= errorMessages.length) {
+        errorIndex = 0;
+    }
+
+    return message;
 }
+
 /* ==========================================================
    Check Password
 ========================================================== */
