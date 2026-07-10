@@ -136,7 +136,7 @@ yesBtn.addEventListener("click", () => {
 
     setTimeout(() => {
 
-        window.location.href = "story.html";
+        window.location.href = "final.html";
 
     }, 2500);
 
