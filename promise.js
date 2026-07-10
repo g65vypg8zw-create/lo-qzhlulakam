@@ -149,7 +149,7 @@ yesBtn.addEventListener("click", () => {
 
 continueBtn.addEventListener("click", () => {
 
-    window.location.href = "story.html";
+    window.location.href = "final.html";
 
 });
 // ==========================================
