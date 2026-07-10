@@ -184,4 +184,4 @@ setTimeout(() => {
 }, paragraphs.length * 350 + 1000);
 continueBtn.addEventListener("click", () => {
     window.location.href = "gallery.html";
-});const continueBtn = document.getElementById("continueBtn");
+});
