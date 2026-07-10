@@ -120,9 +120,7 @@ body{
    Envelope
 =========================================== */
 
-.envelope{
-
-    position:relative;
+.envelope
 
     width:340px;
 
@@ -344,9 +342,13 @@ body{
 
 .letter-paper{
 
-    position:relative;
+ position:relative;
 
-translateX(-50%) translateY(80px);
+   left:50%;
+
+   top:35px;
+
+   transform:translateX(-50%)translateY(80p);
 
     width:88%;
 
