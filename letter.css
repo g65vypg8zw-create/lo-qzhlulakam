@@ -1,0 +1,745 @@
+/* ===========================================
+   Reset
+=========================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Noto Sans Arabic",sans-serif;
+
+    background:linear-gradient(
+        180deg,
+        #fffdfd 0%,
+        #fff7fb 45%,
+        #fff2f7 100%
+    );
+
+    color:#5f5460;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+}
+
+
+/* ===========================================
+   Background Blur
+=========================================== */
+
+.blur{
+
+    position:fixed;
+
+    border-radius:50%;
+
+    filter:blur(95px);
+
+    opacity:.55;
+
+    z-index:-1;
+
+}
+
+.blur-one{
+
+    width:320px;
+
+    height:320px;
+
+    background:#ffd9eb;
+
+    top:-120px;
+
+    left:-90px;
+
+}
+
+.blur-two{
+
+    width:280px;
+
+    height:280px;
+
+    background:#ffeff7;
+
+    bottom:-100px;
+
+    right:-80px;
+
+}
+
+
+/* ===========================================
+   Page
+=========================================== */
+
+.letter-page{
+
+    width:min(92%,820px);
+
+    margin:auto;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:70px 0;
+
+}
+
+.envelope-area{
+
+    width:100%;
+
+    text-align:center;
+
+}
+/* ===========================================
+   Envelope
+=========================================== */
+
+.envelope{
+
+    position:relative;
+
+    width:340px;
+
+    height:230px;
+
+    margin:0 auto;
+
+    cursor:pointer;
+
+    transition:
+        transform .45s ease;
+
+    animation:floatEnvelope 4s ease-in-out infinite;
+
+}
+
+.envelope:hover{
+
+    transform:scale(1.02);
+
+}
+
+.envelope-body{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        180deg,
+        #fffefe 0%,
+        #fff5fa 100%
+    );
+
+    border-radius:22px;
+
+    border:1px solid rgba(255,220,235,.9);
+
+    box-shadow:
+        0 25px 55px rgba(255,181,212,.22);
+
+}
+
+.envelope-top{
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:115px;
+
+    background:#fff9fc;
+
+    clip-path:polygon(0 0,100% 0,50% 100%);
+
+    border-top-left-radius:22px;
+
+    border-top-right-radius:22px;
+
+    transform-origin:top;
+
+    transition:transform .9s ease;
+
+    z-index:5;
+
+}
+
+.envelope-shadow{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-22px;
+
+    transform:translateX(-50%);
+
+    width:75%;
+
+    height:22px;
+
+    background:rgba(255,196,220,.35);
+
+    filter:blur(18px);
+
+    border-radius:50%;
+
+}
+/* ===========================================
+   Wax Seal
+=========================================== */
+
+.envelope::after{
+
+    content:"B";
+
+    position:absolute;
+
+    left:50%;
+
+    top:52%;
+
+    transform:translate(-50%,-50%);
+
+    width:64px;
+
+    height:64px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        145deg,
+        #f9b4d2,
+        #e889b3
+    );
+
+    color:#ffffff;
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:1.3rem;
+
+    font-weight:700;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:
+        0 12px 25px rgba(233,137,179,.35),
+        inset 0 3px 8px rgba(255,255,255,.35);
+
+    z-index:8;
+
+    transition:
+        transform .8s ease,
+        opacity .6s ease;
+
+}
+
+
+/* ===========================================
+   Tap Text
+=========================================== */
+
+.tap-text{
+
+    margin-top:42px;
+
+    font-size:1rem;
+
+    color:#9c7d90;
+
+    font-weight:600;
+
+    letter-spacing:.3px;
+
+    animation:fadeText 2.5s ease-in-out infinite;
+
+}
+
+
+/* ===========================================
+   Floating Animation
+=========================================== */
+
+@keyframes floatEnvelope{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeText{
+
+    0%{
+
+        opacity:.45;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.45;
+
+    }
+
+}
+/* ===========================================
+   Letter Paper
+=========================================== */
+
+.letter-paper{
+
+    position:absolute;
+
+    left:50%;
+
+    top:35px;
+
+    transform:translateX(-50%) translateY(80px);
+
+    width:88%;
+
+    background:#fffefd;
+
+    border-radius:22px;
+
+    padding:42px 34px;
+
+    box-shadow:
+        0 22px 50px rgba(255,188,217,.18);
+
+    border:1px solid rgba(255,235,244,.9);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:
+        all .9s ease;
+
+    z-index:2;
+
+}
+
+.paper-header{
+
+    text-align:center;
+
+    margin-bottom:42px;
+
+}
+
+.paper-subtitle{
+
+    display:inline-block;
+
+    padding:8px 20px;
+
+    border-radius:999px;
+
+    background:#fff2f8;
+
+    color:#d56b99;
+
+    font-family:"Poppins",sans-serif;
+
+    font-weight:600;
+
+    font-size:.9rem;
+
+}
+
+.paper-header h1{
+
+    margin-top:18px;
+
+    color:#6b5262;
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+}
+
+.paper-line{
+
+    width:90px;
+
+    height:4px;
+
+    margin:22px auto 0;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        90deg,
+        #ffbfdc,
+        #ffe2ef
+    );
+
+}
+/* ===========================================
+   Letter Content
+=========================================== */
+
+.paper-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:26px;
+
+}
+
+.letter-paragraph{
+
+    color:#675865;
+
+    font-size:1.05rem;
+
+    line-height:2.4;
+
+    font-weight:500;
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+.letter-paragraph.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/* ===========================================
+   Letter Footer
+=========================================== */
+
+.letter-footer{
+
+    margin-top:60px;
+
+    padding-top:35px;
+
+    border-top:1px solid #f6dce8;
+
+    text-align:left;
+
+    direction:ltr;
+
+}
+
+.footer-text{
+
+    font-family:"Poppins",sans-serif;
+
+    color:#8d7585;
+
+    font-size:.95rem;
+
+    margin-bottom:14px;
+
+}
+
+.signature{
+
+    font-family:"Poppins",sans-serif;
+
+    color:#d66c9a;
+
+    font-size:2rem;
+
+    font-weight:600;
+
+}
+
+.letter-date{
+
+    display:block;
+
+    margin-top:10px;
+
+    color:#b79aaa;
+
+    font-size:.9rem;
+
+}
+/* ===========================================
+   Open Envelope
+=========================================== */
+
+.envelope.open .envelope-top{
+
+    transform:rotateX(180deg);
+
+}
+
+.envelope.open::after{
+
+    opacity:0;
+
+    transform:translate(-50%,-50%) scale(.7);
+
+}
+
+.letter-paper.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateX(-50%) translateY(-20px);
+
+}
+
+
+/* ===========================================
+   Responsive
+=========================================== */
+
+@media (max-width:768px){
+
+    .envelope{
+
+        width:290px;
+
+        height:200px;
+
+    }
+
+    .letter-paper{
+
+        width:94%;
+
+        padding:30px 22px;
+
+    }
+
+    .paper-header h1{
+
+        font-size:1.6rem;
+
+    }
+
+    .letter-paragraph{
+
+        font-size:1rem;
+
+        line-height:2.2;
+
+    }
+
+    .signature{
+
+        font-size:1.7rem;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .letter-page{
+
+        padding:40px 0;
+
+    }
+
+    .envelope{
+
+        width:250px;
+
+        height:175px;
+
+    }
+
+    .tap-text{
+
+        font-size:.9rem;
+
+    }
+
+    .paper-subtitle{
+
+        font-size:.8rem;
+
+    }
+
+    .paper-header h1{
+
+        font-size:1.35rem;
+
+    }
+
+    .letter-paper{
+
+        border-radius:18px;
+
+        padding:24px 18px;
+
+    }
+
+    .letter-paragraph{
+
+        font-size:.95rem;
+
+        line-height:2.1;
+
+    }
+
+    .signature{
+
+        font-size:1.5rem;
+
+    }
+
+/* ===========================================
+   Sparkles
+=========================================== */
+
+.sparkle{
+
+    position:fixed;
+
+    pointer-events:none;
+
+    user-select:none;
+
+    z-index:1000;
+
+    animation:sparkle 1.8s ease forwards;
+
+}
+
+@keyframes sparkle{
+
+    0%{
+
+        opacity:0;
+
+        transform:scale(.3);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translateY(-30px) scale(.6);
+
+    }
+
+}
+
+// ==========================================
+// Continue Button
+// ==========================================
+
+const continueButton =
+document.getElementById("continueButton");
+
+function showContinueButton(){
+
+    setTimeout(()=>{
+
+        if(continueButton){
+
+            continueButton.classList.add("show");
+
+        }
+
+    },2500);
+
+}
+
+continueButton?.addEventListener("click",()=>{
+
+    window.location.href="story.html";
+
+});
+
+
+// ==========================================
+// Show Button After Reading
+// ==========================================
+
+setTimeout(()=>{
+
+    showContinueButton();
+
+},5000);
