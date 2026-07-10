@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color"
+          content="#FFF8FB">
+
+    <title>My Girl 🎀</title>
+
+    <!-- Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="home.css">
+
+</head>
+
+<body>
+
+    <!-- Background -->
+
+    <div class="background-layer">
+
+        <span class="blur-circle blur-one"></span>
+
+        <span class="blur-circle blur-two"></span>
+
+        <span class="blur-circle blur-three"></span>
+
+    </div>
+
+
+    <!-- Main -->
+
+    <main class="home-container">
+
+        <section class="lock-card">
+
+            <div class="lock-icon">
+
+                <div class="icon-ring">
+
+                    <div class="icon-core">
+
+                        🤍
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <h1 class="main-title">
+
+                بەخێربێیت قژلوکەکەم
+
+            </h1>
+
+            <p class="main-subtitle">
+
+                کۆدەکە لێبدە جا برۆ 🎀
+
+            </p>
+
+            <!-- Password -->
+
+            <div class="password-wrapper">
+
+                <input
+
+                    id="passwordInput"
+
+                    type="password"
+
+                    placeholder="••••••••"
+
+                    autocomplete="off"
+
+                    spellcheck="false">
+
+            </div>
+
+            <!-- Unlock -->
+
+            <button id="unlockButton">
+
+                My Girl
+
+            </button>
+
+            <!-- Message -->
+
+            <div id="statusMessage">
+
+            </div>
+                        <!-- Success Screen -->
+
+            <section id="welcomeScreen"
+                     class="screen hidden">
+
+                <div class="screen-card">
+
+                    <div class="screen-icon">
+
+                        🎀
+
+                    </div>
+
+                    <h2 class="screen-title">
+
+                        ئافەرین پشیلەکەم 🎀
+
+                    </h2>
+
+                    <p class="screen-text">
+
+                        زانیم دەتوانیت پاسۆردەکە بزانیت 🤍
+
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Quiz Intro -->
+
+            <section id="quizIntro"
+                     class="screen hidden">
+
+                <div class="screen-card">
+
+                    <div class="screen-icon">
+
+                        💗
+
+                    </div>
+
+                    <h2 class="screen-title">
+
+                        هێشتان ماوتە، دەچێیە کوێ؟؟
+
+                    </h2>
+
+                    <p class="screen-text">
+
+                        وەرە با بزانین چەند لەسەر من ئاگاداریت 🎀
+
+                    </p>
+
+                    <button id="startQuizButton"
+                            class="primary-button">
+
+                        Start
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- Quiz -->
+
+            <section id="quizSection"
+                     class="hidden">
+
+                <div class="quiz-card">
+
+                    <div id="questionNumber">
+
+                        Question 1 / 4
+
+                    </div>
+
+                    <h2 id="questionTitle">
+
+                    </h2>
+
+                    <div id="answersContainer">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+        <!-- Floating Decoration -->
+
+    <div class="floating-heart heart-one"></div>
+
+    <div class="floating-heart heart-two"></div>
+
+    <div class="floating-heart heart-three"></div>
+
+
+    <!-- Audio (Later) -->
+
+    <audio id="backgroundMusic"
+           preload="auto"
+           loop>
+
+        <!-- music.mp3 -->
+
+    </audio>
+
+
+    <!-- JavaScript -->
+
+    <script src="home.js"></script>
+
+</body>
+
+</html>
