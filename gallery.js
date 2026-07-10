@@ -80,5 +80,5 @@ setInterval(createHeart,1800);
 const openLetterButton = document.getElementById("openLetterButton");
 
 openLetterButton.addEventListener("click", () => {
-    window.location.href = "letter_fixed.html";
+    window.location.href = "letter.html";
 });
